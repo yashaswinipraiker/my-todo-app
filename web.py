@@ -2,13 +2,15 @@ import streamlit as st
 import function
 
 todos = function.get_todos()
+
+
 def add_todo():
-    todo =  st.session_state["new_todo"] + "\n"
+    todo = st.session_state["new_todo"] + "\n"
     todos.append(todo)
     function.write_todos(todos)
 
 
-st.title("MY Todo App")
+st.title("My Todo App")
 st.subheader("this is a todo app")
 st.write("this will help you to increase your productivity")
 
